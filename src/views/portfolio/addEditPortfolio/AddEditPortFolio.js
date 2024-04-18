@@ -32,28 +32,48 @@ const AddEditPortFolio = () => {
                 <CardBody>
                   <Form>
                     <h6 className="heading-small text-muted mb-4">
-                      User information
+                      Add Project
                     </h6>
                     <div className="pl-lg-4">
                       <Row>
-                        <Col lg="6">
+                        <Col lg="12">
                           <FormGroup>
                             <label
                               className="form-control-label"
                               htmlFor="input-first-name"
                             >
-                              First name
+                              Project Name
                             </label>
                             <Input
                               className="form-control-alternative"
                               // defaultValue={values.first_name}
-                              placeholder="First name"
+                              placeholder="Project Name"
                               type="text"
-                              name="first_name"
+                              name="projectName"
                               // onChange={handleChange}
                               // onBlur={handleBlur}
                             />
                             {/* <Error field="first_name" /> */}
+                          </FormGroup>
+                        </Col>
+                        <Col lg="12">
+                          <FormGroup>
+                            <label
+                              className="form-control-label"
+                              htmlFor="input-last-name"
+                            >
+                              Description
+                            </label>
+                            <Input
+                              className="form-control-alternative"
+                              // defaultValue={values.last_name}
+                              placeholder="Description"
+                              type="textarea"
+                              name="description"
+                              // onChange={handleChange}
+                              // onBlur={handleBlur}
+                            />
+                            {/* <Error field="last_name" /> */}
                           </FormGroup>
                         </Col>
                         <Col lg="6">
@@ -62,60 +82,38 @@ const AddEditPortFolio = () => {
                               className="form-control-label"
                               htmlFor="input-last-name"
                             >
-                              Last name
+                              Skills
                             </label>
                             <Input
                               className="form-control-alternative"
                               // defaultValue={values.last_name}
-                              placeholder="Last name"
+                              placeholder="Skills"
                               type="text"
-                              name="last_name"
+                              name="skills"
                               // onChange={handleChange}
                               // onBlur={handleBlur}
                             />
                             {/* <Error field="last_name" /> */}
                           </FormGroup>
                         </Col>
-                      </Row>
-                      <Row>
                         <Col lg="6">
                           <FormGroup>
                             <label
                               className="form-control-label"
-                              htmlFor="input-email"
+                              htmlFor="input-last-name"
                             >
-                              Email address
+                              Media
                             </label>
                             <Input
                               className="form-control-alternative"
-                              // defaultValue={values.email}
-                              placeholder="Enter your email"
-                              type="email"
-                              name="email"
+                              // defaultValue={values.last_name}
+                              type="file"
+                              name="media"
                               // onChange={handleChange}
                               // onBlur={handleBlur}
+                              multiple
                             />
-                            {/* <Error field="email" /> */}
-                          </FormGroup>
-                        </Col>
-
-                        <Col lg="6">
-                          <FormGroup>
-                            <label
-                              className="form-control-label"
-                              htmlFor="input-birthdate"
-                            >
-                              Date of Birth
-                            </label>
-                            <Input
-                              className="form-control-alternative"
-                              // defaultValue={values.birthdate}
-                              type="date"
-                              name="birthdate"
-                              // onChange={handleChange}
-                              // onBlur={handleBlur}
-                            />
-                            {/* <Error field="birthdate" /> */}
+                            {/* <Error field="last_name" /> */}
                           </FormGroup>
                         </Col>
                       </Row>
@@ -123,27 +121,26 @@ const AddEditPortFolio = () => {
                     <hr className="my-4" />
                     {/* Address */}
                     <h6 className="heading-small text-muted mb-4">
-                      Contact information
+                      Additional information
                     </h6>
                     <div className="pl-lg-4">
                       <Row>
                         <Col md="12">
                           <FormGroup>
+                            <Input
+                              className="form-control-alternative"
+                              // defaultValue={values.address}
+                              type="checkbox"
+                              name="working"
+                              // onChange={handleChange}
+                              // onBlur={handleBlur}
+                            />
                             <label
                               className="form-control-label"
                               htmlFor="input-address"
                             >
-                              Address
+                              Currently Working here
                             </label>
-                            <Input
-                              className="form-control-alternative"
-                              // defaultValue={values.address}
-                              placeholder="Address"
-                              type="text"
-                              name="address"
-                              // onChange={handleChange}
-                              // onBlur={handleBlur}
-                            />
                             {/* <Error field="address" /> */}
                           </FormGroup>
                         </Col>
@@ -155,14 +152,13 @@ const AddEditPortFolio = () => {
                               className="form-control-label"
                               htmlFor="input-city"
                             >
-                              City
+                              Start Date
                             </label>
                             <Input
                               className="form-control-alternative"
                               // defaultValue={values.city}
-                              placeholder="City"
-                              type="text"
-                              name="city"
+                              type="date"
+                              name="startDate"
                               // onChange={handleChange}
                               // onBlur={handleBlur}
                             />
@@ -175,14 +171,14 @@ const AddEditPortFolio = () => {
                               className="form-control-label"
                               htmlFor="input-country"
                             >
-                              Postal code
+                              End Date
                             </label>
                             <Input
                               className="form-control-alternative"
                               // defaultValue={values.pincode}
                               placeholder="Postal code"
-                              type="number"
-                              name="pincode"
+                              type="date"
+                              name="endDate"
                               // onChange={handleChange}
                               // onBlur={handleBlur}
                             />
